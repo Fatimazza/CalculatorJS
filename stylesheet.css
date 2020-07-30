@@ -35,6 +35,10 @@ button {
   outline: none;
 }
 
+button:hover {
+  background-color: darkgray;
+}
+
 .all-clear,
 .zero-btn {
   width: 50%;
@@ -43,4 +47,9 @@ button {
 .operator,
 .equal-sign {
   background-color: orange;
+}
+
+.operator:hover,
+.equal-sign:hover {
+  background-color: darkorange;
 }
