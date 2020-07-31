@@ -29,7 +29,8 @@ equalSign.addEventListener("click", () => {
 const clearButton = document.querySelector(".all-clear");
 
 clearButton.addEventListener("click", () => {
-  console.log("AC button is pressed");
+  clearAll();
+  updateScreen(currentNumber);
 });
 
 const inputNumber = (number) => {
@@ -65,6 +66,12 @@ const calculate = () => {
       break;
   }
   currentNumber = result;
+  calculationOperator = "";
+};
+
+const clearAll = () => {
+  prevNumber = "";
+  currentNumber = "0";
   calculationOperator = "";
 };
 
