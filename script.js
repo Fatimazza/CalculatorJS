@@ -39,6 +39,26 @@ const inputOperator = (operator) => {
   currentNumber = "";
 };
 
+const calculate = () => {
+  let result = "";
+  switch (calculationOperator) {
+    case "+":
+      result = prevNumber + currentNumber;
+      break;
+    case "-":
+      result = prevNumber - currentNumber;
+      break;
+    case "*":
+      result = prevNumber * currentNumber;
+      break;
+    case "/":
+      result = prevNumber / currentNumber;
+      break;
+    default:
+      break;
+  }
+};
+
 const calculatorScreen = document.querySelector(".calculator-screen");
 
 const updateScreen = (number) => {
