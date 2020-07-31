@@ -2,14 +2,6 @@ let prevNumber = "";
 let currentNumber = "0";
 let calculatorOperator = "";
 
-const inputNumber = (number) => {
-  if (currentNumber === "0") {
-    currentNumber = number;
-  } else {
-    currentNumber += number;
-  }
-};
-
 const numbers = document.querySelectorAll(".number");
 
 numbers.forEach((number) => {
@@ -18,6 +10,14 @@ numbers.forEach((number) => {
     updateScreen(currentNumber);
   });
 });
+
+const inputNumber = (number) => {
+  if (currentNumber === "0") {
+    currentNumber = number;
+  } else {
+    currentNumber += number;
+  }
+};
 
 const calculatorScreen = document.querySelector(".calculator-screen");
 
