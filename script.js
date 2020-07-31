@@ -22,7 +22,8 @@ operator.forEach((operator) => {
 const decimal = document.querySelector(".decimal");
 
 decimal.addEventListener("click", (event) => {
-  console.log(event.target.value);
+  inputDecimal(event.target.value);
+  updateScreen(currentNumber);
 });
 
 const equalSign = document.querySelector(".equal-sign");
@@ -45,6 +46,10 @@ const inputNumber = (number) => {
   } else {
     currentNumber += number;
   }
+};
+
+const inputDecimal = (dot) => {
+  currentNumber += dot;
 };
 
 const inputOperator = (operator) => {
