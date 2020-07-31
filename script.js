@@ -1,8 +1,17 @@
+let prevNumber = "";
+let currentNumber = "";
+let calculatorOperator = "";
+
+const inputNumber = (number) => {
+  currentNumber = number;
+};
+
 const numbers = document.querySelectorAll(".number");
 
 numbers.forEach((number) => {
   number.addEventListener("click", (event) => {
-    updateScreen(event.target.value);
+    inputNumber(event.target.value);
+    updateScreen(currentNumber);
   });
 });
 
