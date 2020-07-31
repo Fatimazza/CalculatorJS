@@ -1,10 +1,13 @@
 let prevNumber = "";
-let currentNumber = "";
+let currentNumber = "0";
 let calculatorOperator = "";
 
 const inputNumber = (number) => {
-  //fix conflict
-  currentNumber += number;
+  if (currentNumber === "0") {
+    currentNumber = number;
+  } else {
+    currentNumber += number;
+  }
 };
 
 const numbers = document.querySelectorAll(".number");
