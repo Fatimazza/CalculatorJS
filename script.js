@@ -11,6 +11,14 @@ numbers.forEach((number) => {
   });
 });
 
+const operator = document.querySelectorAll(".operator");
+
+operator.forEach((operator) => {
+  operator.addEventListener("click", (event) => {
+    inputOperator(event.target.value);
+  });
+});
+
 const inputNumber = (number) => {
   if (currentNumber === "0") {
     currentNumber = number;
