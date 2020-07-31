@@ -3,6 +3,7 @@ let currentNumber = "";
 let calculatorOperator = "";
 
 const inputNumber = (number) => {
+  //fix conflict
   currentNumber += number;
 };
 
