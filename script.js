@@ -1,6 +1,6 @@
 let prevNumber = "";
 let currentNumber = "0";
-let calculatorOperator = "";
+let calculationOperator = "";
 
 const numbers = document.querySelectorAll(".number");
 
@@ -17,6 +17,12 @@ const inputNumber = (number) => {
   } else {
     currentNumber += number;
   }
+};
+
+const inputOperator = (operator) => {
+  prevNumber = currentNumber;
+  calculationOperator = operator;
+  currentNumber = "";
 };
 
 const calculatorScreen = document.querySelector(".calculator-screen");
