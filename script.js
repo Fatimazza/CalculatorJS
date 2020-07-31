@@ -19,6 +19,12 @@ operator.forEach((operator) => {
   });
 });
 
+const decimal = document.querySelector(".decimal");
+
+decimal.addEventListener("click", (event) => {
+  console.log(event.target.value);
+});
+
 const equalSign = document.querySelector(".equal-sign");
 
 equalSign.addEventListener("click", () => {
