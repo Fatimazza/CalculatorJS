@@ -19,6 +19,12 @@ operator.forEach((operator) => {
   });
 });
 
+const equalSign = document.querySelector(".equal-sign");
+
+equalSign.addEventListener("click", () => {
+  console.log("equal button pressed");
+});
+
 const inputNumber = (number) => {
   if (currentNumber === "0") {
     currentNumber = number;
