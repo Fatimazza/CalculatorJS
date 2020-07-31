@@ -22,7 +22,8 @@ operator.forEach((operator) => {
 const equalSign = document.querySelector(".equal-sign");
 
 equalSign.addEventListener("click", () => {
-  console.log("equal button pressed");
+  calculate();
+  updateScreen(currentNumber);
 });
 
 const inputNumber = (number) => {
@@ -57,6 +58,8 @@ const calculate = () => {
     default:
       break;
   }
+  currentNumber = result;
+  calculationOperator = "";
 };
 
 const calculatorScreen = document.querySelector(".calculator-screen");
